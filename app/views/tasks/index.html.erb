@@ -7,11 +7,11 @@
 	</tr>
 	<% @tasks.each do |task| %>
 	<tr>
-		<td width="100" > <%= task.zadanie %> </td>
+		<td width="200" > <%= task.zadanie %> </td>
 		
-		<td> <%= link_to "Pokaż zadanie |", task_path(task) %> </td>
-		<td> <%= link_to "Edytuj zadanie |", edit_task_path(task) %> </td>
-		<td> <%= link_to "Kasuj zadanie |", task_path(task), method: :delete, data: { confirm: "Czy jestes pewien ?"} %> </td>
+		<td width="200"> <%= link_to "Pokaż zadanie", task_path(task) %> </td>
+		<td width="200"> <%= link_to "Edytuj zadanie", edit_task_path(task) %> </td>
+		<td width="200"> <%= link_to "Kasuj zadanie", task_path(task), method: :delete, data: { confirm: "Czy jestes pewien ?"} %> </td>
 	</tr>
 	<% end %>
 </table>
