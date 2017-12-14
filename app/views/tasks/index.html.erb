@@ -2,13 +2,13 @@
 <p><%= link_to "nowe zadanie", new_task_path %></p>
 <table style = "border:1px dashed black">
 	<tr>
-		<th> Zadanie | </th>
-		<th> Opis zadania </th>
+		<th> Twoje Zadania : </th>
+	  
 	</tr>
 	<% @tasks.each do |task| %>
 	<tr>
-		<td> <%= task.zadanie %> </td>
-		<td width="50" > <%= task.opis_zadania %> </td>
+		<td width="100" > <%= task.zadanie %> </td>
+		
 		<td> <%= link_to "Pokaż zadanie |", task_path(task) %> </td>
 		<td> <%= link_to "Edytuj zadanie |", edit_task_path(task) %> </td>
 		<td> <%= link_to "Kasuj zadanie |", task_path(task), method: :delete, data: { confirm: "Czy jestes pewien ?"} %> </td>
