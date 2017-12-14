@@ -1,0 +1,17 @@
+<h1> edit </h1>
+
+<%= form_for @task, url: {action: "update"} do |f| %>
+	<p>
+  	<%= f.label :zadanie %>
+  </p>
+  <p>
+  	<%= f.text_field :zadanie %>
+  </p>
+  <p>
+  	<%= f.label :opis_zadania %>
+  </p>
+  <p>
+  	<%= f.text_area :opis_zadania %>
+	</p>
+  <%= f.submit "Zapisz zmiany" %>
+<% end %>

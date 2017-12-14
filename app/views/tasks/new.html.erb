@@ -1,0 +1,25 @@
+<h1> Nowe zadanie </h1>
+
+<% if @task.errors.any? %>
+<ul>
+	<% @task.errors.full_messages.each do |msg| %>
+	<li> <%= msg %> </li>
+	<% end %>
+</ul>
+<% end %>
+
+<%= form_for @task, url: {action: "create"} do |f| %>
+	<p>
+  	<%= f.label :zadanie %>
+  </p>
+  <p>
+  	<%= f.text_field :zadanie %>
+  </p>
+  <p>
+  	<%= f.label :opis_zadania %>
+  </p>
+  <p>
+  	<%= f.text_area :opis_zadania %>
+	</p>
+  <%= f.submit "Utwórz" %>
+<% end %>
